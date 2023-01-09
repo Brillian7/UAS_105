@@ -73,37 +73,7 @@ namespace UAS_105
             previous.next = newnode;
             
         }
-        public bool cari() //LINEAR
-        {
-            //accept the number to be searched
-            Console.Write("\nmasukkan nobuku yang mau dicari: ");
-            int no = Convert.ToInt32(Console.ReadLine());
-
-            //apply linear search
-            node previous, currentnode;
-
-            previous = START;
-            currentnode = START;
-
-            while((currentnode != null))
-            {
-                if (no == currentnode.nobuku)
-                {
-                    Console.WriteLine("\nnomor buku: " + currentnode.nobuku + "\n" +
-                        "Nomor Buku: " + currentnode.nobuku + "\n" +
-                        "judul Buku: " + currentnode.judul + "\n" + 
-                        "Nama Pengarang: " + currentnode.name + "\n" + 
-                        "Tahun Terbit: " + currentnode.name + "\n"
-                        );
-                }
-                previous = currentnode;
-                currentnode = currentnode.next;
-            }
-            if (currentnode == null)
-                return (false);
-            else
-                return (true);
-        }
+       
         public bool search(int nobuku, ref node previous,ref node current)
         {
             previous = START;
@@ -221,8 +191,8 @@ namespace UAS_105
 }
 
 
-//2. bubble sort,insetion sort,merge sort,dan quick sort.
-// single linked list,doubly linked list,circular linked list,
+//2. bubble sort,insetion sort
+// single linked list,doubly linked list
 //3. PUSH and POP
 //4. Element are inserted at the REAR end and delete from the FRONT end.
 //5. a. 5
